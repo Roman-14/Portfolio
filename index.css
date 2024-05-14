@@ -1,0 +1,94 @@
+body, html {
+    height: 100%;
+    margin: 0px;
+}
+
+.ubuntu-condensed-regular {
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    user-select: none;
+}
+
+.image-center {
+    display: flex;
+    align-items: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+    float: right;
+}
+
+#description {
+    color: #fff;
+}
+#github {
+    width: 10%;
+    height: 10%;
+}
+#r {
+   width: 7%;
+   height: 7%; 
+}
+#logo {
+    font-weight: 900;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+    
+}
+.flexbox1 {
+    order: 1;
+    width: 33%;
+    height: 100%;
+}
+.flexbox3 {
+    order: 3;
+    width: 33%;
+    height: 100%;
+}
+.flexbox2 {
+    order: 2;
+    width: 66%;
+    height: 100%;
+}
+.flexbox1, .flexbox3, .navbar, .flexbox2 {
+    background-color: #222222;
+}
+@keyframes cursor-blink {
+    0% {
+      opacity: 0;
+    }
+}
+
+#logo::after {
+    content: "_";
+    animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+.navbar {
+    overflow: hidden;
+    position: sticky; 
+    top: 0;
+    right: 0;
+    width: 100%; 
+    border-bottom: 2px solid lightgray;
+}
+
