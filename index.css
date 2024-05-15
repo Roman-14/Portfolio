@@ -18,6 +18,7 @@ body, html {
 
 .center {
     text-align: center;
+
 }
 
 .left {
@@ -42,14 +43,17 @@ body, html {
    height: 4em; 
 }
 
-#logo {
-    font-weight: 900;
-    color: white;
+#logo-div {
     display: inline-block;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+#logo {
+    font-weight: 900;
+    color: white;
     text-align: center;
+
 }
 
 
