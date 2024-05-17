@@ -1,6 +1,7 @@
 body, html {
     height: 100%;
     margin: 0px;
+    background-color: #222222;
 }
 
 .ubuntu-condensed-regular {
@@ -43,8 +44,17 @@ body, html {
    height: 4em; 
 }
 
-#logo-div {
-    display: inline-block;
+.media-div {
+    display: flex;
+    justify-content: center;
+}
+
+.media {
+    width: 50em;
+    height: 30em;
+}
+
+.logo-div {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -83,6 +93,7 @@ body, html {
 .flexbox1, .flexbox3, .navbar, .flexbox2 {
     background-color: #222222;
 }
+
 @keyframes cursor-blink {
     0% {
       opacity: 0;
