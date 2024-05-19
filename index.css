@@ -40,8 +40,9 @@ body, html {
 }
 
 #r {
-   width: 4em;
-   height: 4em; 
+   width: 6em;
+   height: 6em;
+   filter: drop-shadow(0 0 1.5rem rgba(220, 20, 60, 0.5));
 }
 
 .media-div {
@@ -52,6 +53,7 @@ body, html {
 .media {
     width: 60em;
     height: 35em;
+    filter: drop-shadow(0 0 1.5rem rgba(220, 20, 60, 0.5));
 }
 
 .carousel-1 {
@@ -74,6 +76,17 @@ body, html {
     border-radius: 100%;
 }
 
+.white {
+    color: white;
+}
+.scroll-button-left {
+    transform: translate(-50%, -50%);
+    left: 0;
+}
+
+.scroll-button-right {
+    transform: translate(50%, -50%);right: 0;
+}
 .logo-div {
     position: absolute;
     left: 50%;
