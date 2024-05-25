@@ -46,7 +46,7 @@ function logoTyping() {
 logoTyping();
 
 window.addEventListener('scroll', function() {
-    var navbar = document.querySelector('.navbar');
+    var navbar = document.querySelector('.box-shadow');
     if (window.scrollY > 0) {
       navbar.classList.add('scrolled');
     } else {
