@@ -3,6 +3,14 @@ body, html {
     margin: 0px;
     background-color: #222222;
 }
+hr {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: none;
+    height: 1px;
+    background-color: black;
+}
 .horizontal-center {
     display: flex;
     flex-direction: column;
@@ -82,12 +90,12 @@ body, html {
     color: white;
 }
 .scroll-button-left {
-    transform: translate(-20%, -50%);
+    transform: translate(-10%, -50%);
     left: 0;
 }
 
 .scroll-button-right {
-    transform: translate(-20%, -50%);
+    transform: translate(10%, -50%);
     right: 0;
 }
 
