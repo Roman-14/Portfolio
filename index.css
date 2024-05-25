@@ -144,7 +144,14 @@ body, html {
     top: 0;
     right: 0;
     width: 100%; 
-    border-bottom: 2px solid lightgray;
+
     height: 6em;
 }
 
+.navbar {
+    transition: box-shadow 0.3s ease-in-out;
+}
+  
+.navbar.scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
