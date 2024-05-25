@@ -82,13 +82,15 @@ body, html {
     color: white;
 }
 .scroll-button-left {
-    transform: translate(-50%, -50%);
+    transform: translate(-20%, -50%);
     left: 0;
 }
 
 .scroll-button-right {
-    transform: translate(50%, -50%);right: 0;
+    transform: translate(-20%, -50%);
+    right: 0;
 }
+
 .logo-div {
     position: absolute;
     left: 50%;
@@ -153,8 +155,6 @@ body, html {
 .box-shadow {
     transition: box-shadow 0.3s ease-in-out;
 }
-  
 .box-shadow.scrolled {
-    background-color: red;
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
