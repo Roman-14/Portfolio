@@ -21,6 +21,12 @@ function productivity4_right() {
     document.getElementById("productivity4").src = productivity4_images[productivity4_index];
     document.getElementById("productivity4-number").innerText = (productivity4_index+1).toString()+ "/" + productivity4_images.length.toString();
     document.getElementById("productivity4-caption").innerText = productivity4_captions[productivity4_index]
+    let img = document.createElement('img');
+    img.src = productivity4_images[productivity4_index]
+    img.classList.add("media")
+    img.classList.add("media-animation")
+    document.querySelector(".media-div").appendChild(img);
+    img.classList.remove("media-animation")
 };
 
 function productivity4_left() {
