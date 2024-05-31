@@ -25,7 +25,7 @@ function productivity4_right() {
     img.src = productivity4_images[productivity4_index];
     img.classList.add("media");
     img.classList.add("media-animation");
-    img.attributes.style="transition: translate 1s;";
+    img.classList.add("media-transition");
     document.querySelector(".media-div").appendChild(img);
     img.classList.remove("media-animation");
 };
