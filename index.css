@@ -67,14 +67,17 @@ hr {
     width: 100%;
     height: 100%;
 }
+
 .media-transition {
-    transition: translate 1s;
+    transition: transform 1s;
 }
 
-.media-animation {
+.media-animation-right {
     transform: translateX(110%);
 }
-
+.media-animation-left {
+    transform: translateX(-110%);
+}
 .carousel-1 {
     width: 60em;
     height: 35em;

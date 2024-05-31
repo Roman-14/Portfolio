@@ -18,16 +18,17 @@ function productivity4_right() {
     if (productivity4_index>=productivity4_images.length) {
         productivity4_index = 0;
     };
-    document.getElementById("productivity4").src = productivity4_images[productivity4_index];
+    //document.getElementById("productivity4").src = productivity4_images[productivity4_index];
     document.getElementById("productivity4-number").innerText = (productivity4_index+1).toString()+ "/" + productivity4_images.length.toString();
     document.getElementById("productivity4-caption").innerText = productivity4_captions[productivity4_index];
     let img = document.createElement('img');
     img.src = productivity4_images[productivity4_index];
-    img.classList.add("media");
-    img.classList.add("media-animation");
-    img.classList.add("media-transition");
     document.querySelector(".media-div").appendChild(img);
-    img.classList.remove("media-animation");
+    img.classList.add("media");
+    img.classList.add("media-animation-right");
+    img.classList.add("media-transition");
+    setTimeout(() => {img.classList.remove("media-animation-right")}, 0);
+    setTimeout(() => document.querySelector(".media-div").removeChild(document.querySelector(".media-div").children[0]), 1000);
 };
 
 function productivity4_left() {
@@ -35,9 +36,17 @@ function productivity4_left() {
     if (productivity4_index < 0) {
         productivity4_index = productivity4_images.length - 1
     };
-    document.getElementById("productivity4").src = productivity4_images[productivity4_index];
+    //document.getElementById("productivity4").src = productivity4_images[productivity4_index];
     document.getElementById("productivity4-number").innerText = (productivity4_index+1).toString() + "/" + productivity4_images.length.toString();
     document.getElementById("productivity4-caption").innerText = productivity4_captions[productivity4_index]
+    let img = document.createElement('img');
+    img.src = productivity4_images[productivity4_index];
+    document.querySelector(".media-div").appendChild(img);
+    img.classList.add("media");
+    img.classList.add("media-animation-left");
+    img.classList.add("media-transition");
+    setTimeout(() => {img.classList.remove("media-animation-left")}, 0);
+    setTimeout(() => document.querySelector(".media-div").removeChild(document.querySelector(".media-div").children[0]), 1000);
 };
 
 function logoTyping() {
