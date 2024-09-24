@@ -55,8 +55,7 @@ hr {
    height: 6em;
 }
 
-.media-div {
-    display: flex;
+.media-div, .media-div-2 {
     justify-content: center;
 }
 
@@ -64,10 +63,9 @@ hr {
     filter: drop-shadow(0 0 1.5rem rgba(220, 20, 60, 0.5));
     border-radius: 2em;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 1000px;
+    height: 550px;
 }
-
 .media-transition {
     transition: transform 1s;
 }
@@ -79,9 +77,13 @@ hr {
     transform: translateX(-110%);
 }
 .carousel-1 {
-    width: 60em;
     height: 35em;
     transform: translateY(0%);
+}
+
+.carousel-2 {
+    height: 35em;
+    transform: translateY(-60%);
 }
 
 .scroll-button {
@@ -104,12 +106,12 @@ hr {
     color: white;
 }
 .scroll-button-left {
-    transform: translate(-10%, -50%);
+    transform: translate(-50%, -50%);
     left: 0;
 }
 
 .scroll-button-right {
-    transform: translate(10%, -50%);
+    transform: translate(50%, -50%);
     right: 0;
 }
 
@@ -127,31 +129,6 @@ hr {
 
 
 
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 100%;
-    
-}
-.flexbox1 {
-    order: 1;
-    width: 33%;
-    height: 100%;
-}
-.flexbox3 {
-    order: 3;
-    width: 33%;
-    height: 100%;
-}
-.flexbox2 {
-    order: 2;
-    width: 66%;
-    height: 100%;
-}
-.flexbox1, .flexbox3, .navbar, .flexbox2 {
-    background-color: #222222;
-}
 
 @keyframes cursor-blink {
     0% {
@@ -170,7 +147,7 @@ hr {
     top: 0;
     right: 0;
     width: 100%; 
-
+    z-index: 1000;
     height: 6em;
 }
 
@@ -179,4 +156,6 @@ hr {
 }
 .box-shadow.scrolled {
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    background-color: #222;
+    z-index: 1000;
 }
