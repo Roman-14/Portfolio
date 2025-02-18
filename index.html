@@ -1,80 +1,318 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-        <script src="index.js"></script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Roman Smiljanic | Software Developer</title>
+  <link rel="icon" href="assets/icon.png" type="image/x-icon">
+  <meta name="description" content="Stunning portfolio website for Your Name, a creative software developer turning ideas into reality.">
+  <meta name="keywords" content="portfolio, Your Name, software developer, projects, design">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Swiper Carousel CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">Roman Smiljanic</div>
+      <ul class="nav-links">
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1 class="hero-title">Roman Smiljanic</h1>
+      <p class="hero-subtitle">Software Developer</p>
+      <a href="#portfolio" class="btn-cta">View Portfolio</a>
+    </div>
+  </header>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
-        <link rel="icon" href="assets/icon.png" type="image/x-icon">
-        <title>Roman-14</title>
-    </head>
-    <body>
-
-        <div class="horizontal-center">
-            <div class = "box-shadow" style="position: fixed; left: 0; right: 0;height: 6em;"></div>
-            <div style="width: 100%; max-width: 1000px">
-                <nav class = "navbar" id = "bar">
-                    <div style="float: inline-start;" class = "image-center left"><img src="assets/r.png" id = "r" alt="Logo"></div>
-                    <div style = "position: absolute;left: 50%;transform: translateX(-50%);" class = "logo-div image-center"><h1 class = "ubuntu-condensed-regular center" id = "logo" class = "center"></h1></div>
-                    <div style = "float: inline-end;" class = "image-center right"><a target ="_blank" href = "https://github.com/Roman-14"><img id = "github" src="assets/github.png" class = "right" alt="Github"></a></div>
-                </nav>
-                <br>
-                <br>
-                <h1 class = "ubuntu-condensed-regular" style="color: white;margin-left:2%;font-weight:600;">Achievements:</h1>
-                <h2 class = "ubuntu-condensed-regular" style="color: white;" id = "description">
-                    <ul>
-                        <li>RomanOS - My large GUI project coded in python</li>
-                        <li>Productivity 4 - A web-based productivity app using svelte</li>
-                        <li>Completed several codecademy courses in a variety of programming languages</li>
-                        <li>Grades 9, 8, 8 in GCSE Maths, Computer Science and Physics respectively</li>
-                        <li>Won the Academic Achievement awards for Physics and Computer Science during Year 10 awards evening</li>
-                        <li>Nominated the effort awards for French and Life Skills during Year 10 awards evening</li>
-                        <li>Grade A in A Level Mathematics</li>
-                    </ul>   
-                </h2>
-                <br>
-                <h1 class = "ubuntu-condensed-regular white" style="margin-left:2%;font-weight:600;">Goals:</h1>
-                <h2 class = "ubuntu-condensed-regular white" id = "description">
-                    <ul>
-                        <li>A* in A level Computer Science</li>
-                        <li>A in A level Further Mathematics</li>
-                        <li>Completing the Harvard CS50 Artificial Intelligence MOOC</li>
-                        <li>A bachelors degree in Computer Science</li>
-                    </ul>   
-                </h2>
-                
-            
-            <hr>
-            <br><br><br>
-                <div class = "carousels">
-                    <div class = "carousel-1">
-                        <div class = "media-div"><img id = "productivity4" class = "media" src = "assets/productivity4-8.gif"></div>
-                        <button id = "productivity4-left" onclick = "productivity4_left()" class = "scroll-button scroll-button-left"><strong><</strong></button>
-                        <button id = "productivity4-right" onclick = "productivity4_right()" class = "scroll-button scroll-button-right"><strong>></strong></button>
-                    </div>
-                    <br>
-                    <div class = "carousel-1">
-                        <h4 class = "ubuntu-condensed-regular" style = "color: lightgrey;display: inline-block;margin: 0;" id = "productivity4-caption">The log-in process of Productivity4, showing what happens when you enter wrongly and correctly.</h4>
-                        <h3 class = "ubuntu-condensed-regular right white" style = "color: white;display: inline-block;margin: 0;" id = "productivity4-number">1/8</h3>
-                        <h2 class = "ubuntu-condensed-regular white">Productivity4</h2>
-                    </div>
-
-                    <div class = "carousel-2">
-                        <div class = "media-div-2"><img id = "RomanOS" class = "media" src = "assets/RomanOS-3.png"></div>
-                        <button id = "RomanOS-left" onclick = "RomanOS_left()" class = "scroll-button scroll-button-left"><strong><</strong></button>
-                        <button id = "RomanOS-right" onclick = "RomanOS_right()" class = "scroll-button scroll-button-right"><strong>></strong></button>
-                    </div>
-                    <br>
-                    <div class = "carousel-2">
-                        <h4 class = "ubuntu-condensed-regular" style = "color: lightgrey;display: inline-block;margin: 0;" id = "RomanOS-caption">An image encapsulating a few of the desktop environment's functions</h4>
-                        <h3 class = "ubuntu-condensed-regular right white" style = "color: white;display: inline-block;margin: 0;" id = "RomanOS-number">1/8</h3>
-                        <h2 class = "ubuntu-condensed-regular white">RomanOS</h2>
-                    </div>
+  <!-- Main Content -->
+  <main>
+    <!-- Portfolio Section with Individual Carousels for Each Project -->
+    <section id="portfolio" class="portfolio-section">
+      <h2>Portfolio</h2>
+      
+      <!-- Project 1 -->
+        <div class="project">
+          <h3>Productivity App</h3>
+          <p>A platform using mental strategies to push the best out of its users.</p>
+          <div id="carouselExampleIndicators" data-interval="false" class="carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="assets/productivity4-1.gif" alt="Demo of main screen">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Demo of the main screen</h5>
+                  <p>The user's primary workspace.</p>
                 </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="assets/productivity4-2.gif" alt="Using sticky notes">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Using Sticky Notes</h5>
+                  <p>Users can place and save sticky notes.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="assets/productivity4-3.gif" alt="Adding tasks">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Adding tasks</h5>
+                  <p>Users can assign tasks with various attributes to their jobs list.</p>
+                </div>
+              </div>
+            
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/productivity4-4.png" alt="UI photo">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>UI photo</h5>
+                <p>A still image of the main screen.</p>
+              </div>
             </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/productivity4-5.gif" alt="Completing tasks">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Completing tasks</h5>
+                <p>Checking checkboxes and incrementing multi-step tasks to see how it affects the graph and progress bar.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/productivity4-6.png" alt="Tasks page image">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Tasks page image</h5>
+                <p>A picture of what the page to view all tasks the user has added looks like.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/productivity4-7.png" alt="Login page image">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Login page image</h5>
+                <p>A view of the login page.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/productivity4-8.gif" alt="Login page demo">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Login page demo</h5>
+                <p>A demonstration of logging into the app.</p>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
-    </body>
-    
+        </div>
+      </div>
+      
+      <!-- Project 2 -->
+      <div class="project">
+          <h3>Python Desktop Environment</h3>
+          <p>A pseudo operating system created for the joy of navigating user interfaces.</p>
+          <div id="carouselExampleIndicators1" data-interval="false" class="carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="4"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="5"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="6"></li>
+              <li data-target="#carouselExampleIndicators1" data-slide-to="7"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="assets/RomanOS-1.gif" alt="Demo of terminal">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Demo of terminal</h5>
+                  <p>Navigating real hard drive directories with the terminal app.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="assets/RomanOS-2.gif" alt="Demo of text editor and python interpreter">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Text editor and python interpreter</h5>
+                  <p>Coding in the text editor and running the code using the python interpreter feature.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="assets/RomanOS-3.png" alt="Windows">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>A bunch of windows</h5>
+                  <p>An image which encapsulates a lot of the windows in the project.</p>
+                </div>
+              </div>
+            
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/RomanOS-4.gif" alt="FizzBuzz Algorithm">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>FizzBuzz Algorithm</h5>
+                <p>Executing the famous FizzBuzz algorithm with the python interpreter.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/RomanOS-5.gif" alt="Shortcuts">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Creating desktop shortcuts</h5>
+                <p>Creating buttons which execute commands in the terminal for you, acting as shortcuts.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/RomanOS-6.gif" alt="Comparing sorting algorithms">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Sorting algorithms</h5>
+                <p>Running and comparing different sorting algorithms side-by-side.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/RomanOS-7.gif" alt="Multiple window demo">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Multiple windows at once</h5>
+                <p>Footage of the desktop environment multi-tasking.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/RomanOS-8.gif" alt="Changing wallpapers">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Changing wallpapers</h5>
+                <p>Quickly clicking desktop shortcuts which change the wallpaper.</p>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="project">
+        <h3>Concurrently Accessible Text Editor and Whiteboard system</h3>
+        <p>A text editor and whiteboard which multiple users can simultaneously collaborate through, connected with a login and dashboard to view files.</p>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project">
+        <h3>Word Bomb (Work in progress)</h3>
+        <p>A casual yet competitive typing game.</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <h2>About Me</h2>
+      <p>Hi, I'm Roman, a passionate software developer dedicated to turning complex challenges into elegant solutions. With a strong background in computer science and a flair for creative problem-solving, I build software that not only works flawlessly but also delights users.</p>
+      <p>My commitment to excellence has driven me to deliver scalable, high-performance digital experiences across various industries. I blend technical expertise with an eye for design, ensuring that every project reflects both innovation and reliability.</p>
+      <p>Whether designing dynamic web applications or developing robust backend systems, I pride myself on my attention to detail and relentless pursuit of quality. Let’s create something amazing together!</p>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements-section">
+      <h2>Achievements</h2>
+      <div class="achievements-container">
+        <!-- Achievement Card 1 -->
+        <div class="achievement-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="orange" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+            <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5"/>
+          </svg>
+          <h3>Best Developer Award</h3>
+          <p>Recognized for innovation and technical expertise.</p>
+        </div>
+        <!-- Achievement Card 2 -->
+        <div class="achievement-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="blue" class="bi bi-grid-fill" viewBox="0 0 16 16">
+            <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z"/>
+          </svg>
+          <h3>4+ Projects</h3>
+          <p>Successfully completed over 4 in-depth projects, and dozens of smaller ones.</p>
+        </div>
+        <!-- Achievement Card 3 -->
+        <div class="achievement-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="purple" class="bi bi-clock-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+          </svg>
+          <h3>4 Years Experience</h3>
+          <p>Experience of expertise in delivering quality solutions.</p>
+        </div>
+        <!-- Achievement Card 4 -->
+        <div class="achievement-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="red" class="bi bi-globe" viewBox="0 0 16 16">
+            <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/>
+          </svg>
+          <h3>Global Recognition</h3>
+          <p>Solutions acclaimed on a global scale for excellence.</p>
+        </div>
+        <!-- Achievement Card 5 -->
+        <div class="achievement-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="brown" class="bi bi-backpack3" viewBox="0 0 16 16">
+            <path d="M4.04 7.43a4 4 0 0 1 7.92 0 .5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14M4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10z"/>
+            <path d="M6 2.341V2a2 2 0 1 1 4 0v.341c.465.165.904.385 1.308.653l.416-1.247a1 1 0 0 1 1.748-.284l.77 1.027a1 1 0 0 1 .15.917l-.803 2.407C13.854 6.49 14 7.229 14 8v5.5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5V8c0-.771.146-1.509.41-2.186l-.802-2.407a1 1 0 0 1 .15-.917l.77-1.027a1 1 0 0 1 1.748.284l.416 1.247A6 6 0 0 1 6 2.34ZM7 2v.083a6 6 0 0 1 2 0V2a1 1 0 1 0-2 0m5.941 2.595.502-1.505-.77-1.027-.532 1.595q.447.427.8.937M3.86 3.658l-.532-1.595-.77 1.027.502 1.505q.352-.51.8-.937M8 3a5 5 0 0 0-5 5v5.5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5V8a5 5 0 0 0-5-5"/>
+          </svg>
+          <h3>GCSE</h3>
+          <p>Grades 9, 8, 8 in Maths, Computer Science and Physics respectively.</p>
+        </div>
+        <!-- Achievement Card 7 -->
+        <div class="achievement-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="gold" class="bi bi-trophy-fill" viewBox="0 0 16 16">
+            <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935"/>
+          </svg>
+          <h3>Awards evening</h3>
+          <p>Won secondary school annual awards for Physics and Computer Science</p>
+        </div>
+        <!-- Achievement Card 8 -->
+        <div class="achievement-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="green" class="bi bi-book" viewBox="0 0 16 16">
+            <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+          </svg>
+          <h3>A-Level</h3>
+          <p>Grade A in Mathematics. Awaiting Further Mathematics and Computer Science</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+      <p>Get in touch: N/A</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Roman Smiljanic. All rights reserved.</p>
+    <a target ="_blank" href = "https://github.com/Roman-14"><img style = "width: 3em; margin-bottom: 15px;" id = "github" src="assets/github.png" class = "right" alt="Github"></a>
+  </footer>
+
+  <!-- Swiper Carousel JS -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
 </html>

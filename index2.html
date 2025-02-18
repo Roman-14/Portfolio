@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+        <link rel="icon" href="assets/icon.png" type="image/x-icon">
+        <title>Roman-14</title>
+    </head>
+    <body>
+
+        <div class="horizontal-center">
+            <div class = "box-shadow" style="position: fixed; left: 0; right: 0;height: 6em;"></div>
+            <div style="width: 100%; max-width: 1000px">
+                <nav class = "navbar" id = "bar">
+                    <div style="float: inline-start;" class = "image-center left"><img src="assets/r.png" id = "r" alt="Logo"></div>
+                    <div style = "position: absolute;left: 50%;transform: translateX(-50%);" class = "logo-div image-center"><h1 class = "ubuntu-condensed-regular center" id = "logo" class = "center"></h1></div>
+                    <div style = "float: inline-end;" class = "image-center right"><a target ="_blank" href = "https://github.com/Roman-14"><img id = "github" src="assets/github.png" class = "right" alt="Github"></a></div>
+                </nav>
+                <br>
+                <br>
+                <h1 class = "ubuntu-condensed-regular" style="color: white;margin-left:2%;font-weight:600;">Achievements:</h1>
+                <h2 class = "ubuntu-condensed-regular" style="color: white;" id = "description">
+                    <ul>
+                        <li>RomanOS - My large GUI project coded in python</li>
+                        <li>Productivity 4 - A web-based productivity app using svelte</li>
+                        <li>Completed several codecademy courses in a variety of programming languages</li>
+                        <li>Grades 9, 8, 8 in GCSE Maths, Computer Science and Physics respectively</li>
+                        <li>Won the Academic Achievement awards for Physics and Computer Science during Year 10 awards evening</li>
+                        <li>Nominated the effort awards for French and Life Skills during Year 10 awards evening</li>
+                        <li>Grade A in A Level Mathematics</li>
+                    </ul>   
+                </h2>
+                <br>
+                <h1 class = "ubuntu-condensed-regular white" style="margin-left:2%;font-weight:600;">Goals:</h1>
+                <h2 class = "ubuntu-condensed-regular white" id = "description">
+                    <ul>
+                        <li>A* in A level Computer Science</li>
+                        <li>A in A level Further Mathematics</li>
+                        <li>Completing the Harvard CS50 Artificial Intelligence MOOC</li>
+                        <li>A bachelors degree in Computer Science</li>
+                    </ul>   
+                </h2>
+                
+            
+            <hr>
+            <br><br><br>
+                <div class = "carousels">
+                    <div class = "carousel-1">
+                        <div class = "media-div"><img id = "productivity4" class = "media" src = "assets/productivity4-8.gif"></div>
+                        <button id = "productivity4-left" onclick = "productivity4_left()" class = "scroll-button scroll-button-left"><strong><</strong></button>
+                        <button id = "productivity4-right" onclick = "productivity4_right()" class = "scroll-button scroll-button-right"><strong>></strong></button>
+                    </div>
+                    <br>
+                    <div class = "carousel-1">
+                        <h4 class = "ubuntu-condensed-regular" style = "color: lightgrey;display: inline-block;margin: 0;" id = "productivity4-caption">The log-in process of Productivity4, showing what happens when you enter wrongly and correctly.</h4>
+                        <h3 class = "ubuntu-condensed-regular right white" style = "color: white;display: inline-block;margin: 0;" id = "productivity4-number">1/8</h3>
+                        <h2 class = "ubuntu-condensed-regular white">Productivity4</h2>
+                    </div>
+
+                    <div class = "carousel-2">
+                        <div class = "media-div-2"><img id = "RomanOS" class = "media" src = "assets/RomanOS-3.png"></div>
+                        <button id = "RomanOS-left" onclick = "RomanOS_left()" class = "scroll-button scroll-button-left"><strong><</strong></button>
+                        <button id = "RomanOS-right" onclick = "RomanOS_right()" class = "scroll-button scroll-button-right"><strong>></strong></button>
+                    </div>
+                    <br>
+                    <div class = "carousel-2">
+                        <h4 class = "ubuntu-condensed-regular" style = "color: lightgrey;display: inline-block;margin: 0;" id = "RomanOS-caption">An image encapsulating a few of the desktop environment's functions</h4>
+                        <h3 class = "ubuntu-condensed-regular right white" style = "color: white;display: inline-block;margin: 0;" id = "RomanOS-number">1/8</h3>
+                        <h2 class = "ubuntu-condensed-regular white">RomanOS</h2>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </body>
+    
+</html>
