@@ -30,3 +30,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+  $('.carousel').on('slide.bs.carousel', function () {
+    const videos = this.querySelectorAll('video');
+
+    videos.forEach(video => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+
+  $('.carousel').on('slid.bs.carousel', function () {
+    const activeVideo = this.querySelector('.carousel-item.active video');
+
+    if (activeVideo) {
+      activeVideo.currentTime = 0;
+      activeVideo.play();
+    }
+  });
+
+  // also start the first visible video on page load
+  document.querySelectorAll('.carousel').forEach(carousel => {
+    const activeVideo = carousel.querySelector('.carousel-item.active video');
+    if (activeVideo) {
+      activeVideo.currentTime = 0;
+      activeVideo.play();
+    }
+  });
